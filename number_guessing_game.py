@@ -16,7 +16,8 @@ if num == correct_number:
 else:
     decision = input("I'm sorry you've lost. Play again? (y/n): ")
     if decision == 'y' or decision == 'Y':
-        subprocess.call([sys.executable, os.path.realpath(__file__)] +  # We use this just to avoid using loops as I've not learned it yet.
+        # We use this just to avoid using loops as I've not learned it yet.
+        subprocess.call([sys.executable, os.path.realpath(__file__)] +
                         sys.argv[1:])
     if decision == 'n' or decision == 'N':
         quit
