@@ -3,7 +3,7 @@ tempf = input('Enter the temperature in Fahrenheit: ')
 tempf = float(tempf)
 
 # Turns fahrenheit into celsius and celsius into kelvin.
-tempc = (tempf - 32)/1.8
+tempc = (tempf - 32) * 5/9
 tempk = tempc + 273.15
 
 # Formats the string so it only displays the first float number rounded up.
