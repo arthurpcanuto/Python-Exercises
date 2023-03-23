@@ -17,19 +17,25 @@ except ValueError:
     pay = -1
     print('Please input a valid number.')
 
-#This function calculates if the user has overtime hours.
+# This function calculates if the user has overtime hours.
+
+
 def compute_overtime(hours):
     if hours > 40:
         return hours - 40
     else:
         return 0
- 
+
+
 overtime = compute_overtime(total_hours)
 
-#This function calculates the user's total pay.
+# This function calculates the user's total pay.
+
+
 def compute_pay():
-    total_pay = (40 * pay) + (overtime * (1.5 *pay))
+    total_pay = (40 * pay) + (overtime * (1.5 * pay))
     return total_pay
+
 
 total_pay = compute_pay()
 
@@ -43,10 +49,3 @@ else:
 # I use this to restart the program, because I don't know how to use loops yet.
     subprocess.call([sys.executable, os.path.realpath(__file__)] +
                     sys.argv[1:])
-
-
-
-
-
-    
-
