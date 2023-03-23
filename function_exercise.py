@@ -14,30 +14,24 @@ try:
     pay = float(pay)
 except ValueError:
     total_hours = -1
-    pay = -1
+    pay = 1
     #print('Please input a valid number.')
 
-# This function calculates if the user has overtime hours.
+# This function calculates everything now.
 
 
-def compute_overtime(hours):
+def compute_pay(hours, rate):
     if hours > 40:
-        return hours - 40
-    else:
-        return 0
+        overtime = hours - 40
+        hours = hours - overtime
+    elif hours <= 40:
+        overtime = 0
+
+    paycompute = (hours * rate) + (overtime * (1.5 * rate))
+    return paycompute
 
 
-overtime = compute_overtime(total_hours)
-
-# This function calculates the user's total pay.
-
-
-def compute_pay():
-    total_pay = (40 * pay) + (overtime * (1.5 * pay))
-    return total_pay
-
-
-total_pay = compute_pay()
+total_pay = compute_pay(total_hours, pay)
 
 # We use this if/else statement to give information to the user and restart the program
 # if user made mistakes when user had to input his information.
