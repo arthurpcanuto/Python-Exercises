@@ -28,6 +28,7 @@ except ValueError:
 
             # Here we concatenate our madlibs.So we can print it later for the user.
             madlibs = '\nA vacation is when you take a trip to some ' + adjective + ' place. Usually you go to some place that is near a ' \
-                + noun + '. Those places are pretty ' + adjective + '.'
+                + noun + '. Those places are pretty ' + adjective + "." + " Turns out I don't use your verb word '" + verb \
+                    +"' because writing madlibs is harder than coding." 
 
             print(madlibs)
