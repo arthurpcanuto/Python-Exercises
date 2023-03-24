@@ -31,6 +31,11 @@ while running is True:
         print("Here's your list of numbers:", num_list)
         print("Here is the sum of your list:", total_sum)
         print("Here is how many numbers you entered:", num_counter)
+
+        # This exists so we don't get an error for dividing by 0.
+        if num_counter == 0:
+            num_counter = 1
+
         print("Here is the average of your numbers:", (total_sum/num_counter))
 
         # This finishes the loop and consequently the program.
