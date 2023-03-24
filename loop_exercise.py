@@ -3,10 +3,10 @@ running = True
 num_list = []
 num_counter = 0
 
-# Here we print a message so the user know how to use the prgram.
+# Here we print a message so the user knows how to use the program.
 print("This is a number counter, enter a number and press the return key."
-      " You can enter however many number you want, and in the end the program"
-      " will tell you the sum and the number of number you entered.")
+      " You can enter however many numbers you want, and in the end the program"
+      " will tell you the sum and the number of numbers you entered.")
 
 
 # This is my first loop. Hooray!
