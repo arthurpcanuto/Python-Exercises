@@ -26,12 +26,12 @@ while running is True:
     # Here we check to see if user input 'done', if user did we sum all the numbers from the list,
     # make some basic operations and print out the info.
     if num == 'done':
-        sum = sum(num_list)
+        total_sum = sum(num_list)
 
         print("Here's your list of numbers:", num_list)
-        print("Here is the sum of your list:", sum)
+        print("Here is the sum of your list:", total_sum)
         print("Here is how many numbers you entered:", num_counter)
-        print("Here is the average of your numbers:", (sum/num_counter))
+        print("Here is the average of your numbers:", (total_sum/num_counter))
 
         # This finishes the loop and consequently the program.
         running = False
