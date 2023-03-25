@@ -33,12 +33,15 @@ while Playing is True:
     #Here we count how many letters the word has.
     letter_count = int(len(random_word))
 
+    #This prints out a number of (_) equal to the number of letters in the word.
     for i in range(letter_count):
         print('_ ', end="")
 
+    #This creates our (letter) variable then we use our inputcheck() fucntion to see if it is a valid letter.
     letter = input('\nPlease enter a letter: ')
     letter = inputcheck(letter)
 
+    #This and the following (if) statement only exist for testing.
     stop = input('\nY to stop: ')
 
     if stop == "Y":
