@@ -13,6 +13,6 @@ number = float(new_string)
 #Here we print to check if we did everything right.
 print(new_string)
 
-#I guess you could also write it like this:
+#I guess you could also write it like this. This works because float() ignores white spaces. Handy!
 numberx = float(str[str.find(':') + 1:])
 print(numberx)
