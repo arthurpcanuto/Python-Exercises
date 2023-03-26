@@ -1,6 +1,6 @@
 import random
 
-# This function check to see if the user input a letter, if user didn't it prompts user to do so.
+# This function checks to see if the user input a letter, if user didn't it prompts user to do so.
 
 
 def inputcheck(letter):
@@ -9,8 +9,8 @@ def inputcheck(letter):
         letter = input('Please enter a letter: ')
     return letter
 
-# This function checks to see if the user inputted a correct letter, if user did it finds its place on the word
-# and updates (guessed_word) to display it in its correct postion. If user didn't it deducts a try.
+# This function checks to see if the user inserted a correct letter, if user did it finds its place on the word
+# and updates (guessed_word) to display it in its correct postion. If user didn't, it deducts a try.
 
 
 def letter_check(letter, random_word, guessed_word, tries):
@@ -29,7 +29,7 @@ def letter_check(letter, random_word, guessed_word, tries):
 
 # Initial message.
 print('Welcome to my hangman game, it will generate a random word from a dictionary and I hope you know how'
-      ' to play hangman because I do not wnat to explain here!')
+      ' to play hangman because I do not want to explain here!')
 
 input('\nPress enter to start!')
 
