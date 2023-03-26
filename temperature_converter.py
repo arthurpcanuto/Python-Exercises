@@ -38,11 +38,11 @@ print("Welcome to my improved temperature converter!\n")
 
 
 def main():
-    # Here we take the user's choice and split it into temperature and scale.
+    # Here we take the user's choice.
     choice = input(
         "Please type which temperature you would like to convert(e.g., 25 C, 77 F, 100 K): ")
 
-    # We check to see if user inserted the temperature correctly then we float the number value.
+    # We check to see if user inserted the temperature correctly then we split and float the number value.
     # If user didn't we print an error message and then quit.
     try:
         temperature, scale = choice.split()
