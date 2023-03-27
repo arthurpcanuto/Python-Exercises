@@ -1,55 +1,59 @@
-#This checks to see if the number is an odd one.
-def isOdd(number):
-    if number % 2 == 1:
-        return True
-    elif number % 2 != 1:
-        return False
+# This checks to see if the number is fractional, even or odd.
+def check_number(number):
+    if number % 1 != 0:
+        return "fractional"
+    elif number % 2 == 0:
+        return "even"
     else:
-        return False
-#This checks to see if the is an even one.
-def isEven(number):
-    if number % 2 == 0:
-        return True
-    elif number % 2 != 0:
-        return False
-    else:
-        return False
+        return "odd"
 
-#This exists only for user to start the program.
+
+#Some tests to check if the code works.
+def test_check_number():
+    assert check_number(2) == "even"
+    assert check_number(3) == "odd"
+    assert check_number(0) == "even"
+    assert check_number(-2) == "even"
+    assert check_number(-3) == "odd"
+    assert check_number(2.5) == "fractional"
+    assert check_number(-2.5) == "fractional"
+    assert check_number(0.1) == "fractional"
+    print("All tests passed!")
+
+test_check_number()
+
+
+# This exists only for user to start the program.
 input("\nWanna cheack if a number is odd or even? Press enter.\n")
 
 
-#Our main function, the program's logic.
+# Our main function, the program's logic.
 def main():
-    #Try block to check if the user input was correct, if not we quit.
+    # Try block to check if the user input was correct, if not we quit.
     try:
         number = float(input("\nInput your number: "))
     except:
         print("Please enter a valid number.")
         quit()
 
-    #Variables to store the output of our functions.
-    numcheck_Odd = isOdd(number)
-    numcheck_Even = isEven(number)
+    numcheck = check_number(number)
 
-    #After checking to see if the number is even or odd with our functions, we use this to
-    #print out the result for user to see. We also return a message if user entered a fractional number.
-    if numcheck_Odd == True:
-        print("\nThe number is Odd!")
-    elif numcheck_Even == True:
-        print("\nThe number is Even!")
-    else:
+    if numcheck == "fractional":
         print("I'm sorry, I don't know how to check fractionals yet.\n")
+    else:
+        print("\nThe number is " + numcheck.capitalize() + "!")
 
 
-#Control variable for our main loop.   
+# Control variable for our main loop.
 checking = True
-#Our main loop.
+# Our main loop.
 while checking is True:
     main()
-    #User decides if he wants to check more numbers.
-    again = input("Do you wanna check another number? Enter 'yes' to check another number. ")
+    # User decides if he wants to check more numbers.
+    again = input(
+        "Do you wanna check another number? Enter 'yes' to check another number. ")
 
-    #We either close the loop and the program or continue depending on user's decision.
+    # We either close the loop and the program or continue, depends on user's decision.
     if again.lower() != "yes":
         checking = False
+
