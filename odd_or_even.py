@@ -8,7 +8,7 @@ def check_number(number):
         return "odd"
 
 
-#Some tests to check if the code works.
+# Some tests to check if the function above works.
 def test_check_number():
     assert check_number(2) == "even"
     assert check_number(3) == "odd"
@@ -19,6 +19,7 @@ def test_check_number():
     assert check_number(-2.5) == "fractional"
     assert check_number(0.1) == "fractional"
     print("All tests passed!")
+
 
 test_check_number()
 
@@ -36,8 +37,11 @@ def main():
         print("Please enter a valid number.")
         quit()
 
+    # This variable stores the results from our (check_number) function.
     numcheck = check_number(number)
 
+    # Will print a message to the user either with user's result or,
+    # if the result is fractional, an appropriate message.
     if numcheck == "fractional":
         print("I'm sorry, I don't know how to check fractionals yet.\n")
     else:
@@ -56,4 +60,3 @@ while checking is True:
     # We either close the loop and the program or continue, depends on user's decision.
     if again.lower() != "yes":
         checking = False
-
