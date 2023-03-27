@@ -5,6 +5,13 @@ file_name = input("Enter a file name: ")
 #We use open() to assign this variable the file handle, hence why it is called (fhand).
 fhand = open(file_name)
 
-#Basic loop to print the file's content in uppercase.
+
 for line in fhand:
-    print(line.upper())
+    #This removes the extra spaces on the end of the lines.
+    line = line.rstrip()
+    #If the line does not start with 'From' the loop skips to its next iteration.
+    if not line.startswith("From ") : continue
+    #This splits the string (line) everytime there is a space(' '), and makes a list out of the words in that line.
+    words = line.split()
+    #This prints the third word stored in the variable (words).
+    print(words[2])
