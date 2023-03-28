@@ -29,10 +29,16 @@ def surface_area(legnth, width, height):
 def check_Decimal_input(prompt):
     while True:
         try:
-            value = Decimal(input(prompt))
-            return value
-        except ValueError:
-            print("Please input a valid number.")
+            user_input = Decimal(input(prompt))
+            break
+        except:
+            print("\nPlease input a valid number.")
+        
+    if user_input < 0:
+        user_input = user_input * -1
+        return user_input
+    else:
+        return user_input
 
 # This function will capture the user's input and return them as decimal numbers
 # So now we can use them to calculate our result with precision.
@@ -83,7 +89,7 @@ def print_results(choice, result):
 
 
 # Our initial message to the user.
-print("\nThis program calculates the area, volume, perimeter and surface area of the "
+print("\nThis program calculates the area, volume, perimeter and surface area of "
       "retangles and retangular prisms. Yes, it does include cubes.")
 
 # This is our main function and the program's logic.
