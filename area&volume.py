@@ -125,3 +125,4 @@ while Calculating is True:
 
     if user_decision.lower() != 'yes':
         Calculating = False
+        
