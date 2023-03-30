@@ -14,7 +14,7 @@ def ordinalSuffix(number):
     # I'm not proud about how long I took to come up with this.
     # These conditionals check to see if the number ends with 11, 12 or 13.
     # However the first statement will not work on numbers bigger than 100,
-    # So we need the second one to catch any number bigger than 100 to infinite,
+    # So we need the second one to catch any number bigger than 100 up to infinite,
     # However the second statement will not catch any number lower than 100, so yeah, we need both.
     # Also, if we wrote this in a single line with (or) it would always be true (for some reason I don't yet understand),
     # So I wrote it like this, when I improve I'll come back to fix this thing, I'm sure there's a better way to do this.
@@ -36,7 +36,7 @@ def ordinalSuffix(number):
         return number_string + suffixes[3]
 
 
-# Some test to see if the code works.
+# Some tests to see if the code works.
 assert ordinalSuffix(0) == "0th"
 assert ordinalSuffix(1) == "1st"
 assert ordinalSuffix(2) == "2nd"
