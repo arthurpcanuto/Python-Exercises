@@ -1,5 +1,5 @@
-# This for a function to display the ASCII number and
-# Its corresponding text character, from 32 to 126.
+# This exercise asks for a function to display the ASCII number and
+# its corresponding text character, from 32 to 126.
 
 
 # This function will take a number from 32 to 126 and
