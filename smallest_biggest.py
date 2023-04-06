@@ -8,7 +8,7 @@ def getSmallest(numbers):
     if len(numbers) == 0:
         return None
 
-    # We create list so we can compare to the list (numbers) and store the smallest value.
+    # We create a list so we can compare to the list (numbers) and store the smallest value.
     smallest = numbers[0]
 
     # This loop is the main logic. If (n) is smaller than the number in (smallest), it takes its place.
